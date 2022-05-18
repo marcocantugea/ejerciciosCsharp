@@ -5,3 +5,10 @@ D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Deb
 D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.csproj.CoreCompileInputs.cache
 D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.exe
 D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.pdb
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\bin\Debug\EjeciciosEstructuraDatos.exe.config
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\bin\Debug\EjeciciosEstructuraDatos.exe
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\bin\Debug\EjeciciosEstructuraDatos.pdb
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.csproj.AssemblyReference.cache
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.csproj.CoreCompileInputs.cache
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.exe
+C:\Users\R105\Documents\Cursos\C# MCantu\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.pdb

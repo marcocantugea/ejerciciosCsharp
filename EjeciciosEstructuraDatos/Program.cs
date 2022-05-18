@@ -85,7 +85,12 @@ namespace EjeciciosEstructuraDatos
             //}
 
             Factura factura1 = new Factura();
-            factura1.detalle.partidas.Add(new Partida());
+
+            factura1.detalle.partidas.Add(new Partida()
+            {
+                precio = "50.00",
+                desc = "Huevos con Jamon"
+            });
 
             foreach (Partida partida in factura1.detalle.partidas)
             {
@@ -112,5 +117,8 @@ namespace EjeciciosEstructuraDatos
         public List<Partida> partidas = new List<Partida>();
     }
 
-    class Partida { }
+    class Partida { 
+    public string precio { get; set; }
+        public string desc { get; set; }
+    }
 }
