@@ -10,7 +10,8 @@ namespace EjeciciosEstructuraDatos
     {
         static void Main(string[] args)
         {
-            ArraysExample();
+            //ArraysExample();
+            StackExample();
             Console.Read();
         }
 
@@ -91,7 +92,65 @@ namespace EjeciciosEstructuraDatos
             {
 
             }
+
         }
+
+        public static void StackExample()
+        {
+
+            Stack<string> stackDeStrings = new Stack<string>();
+
+            stackDeStrings.Push("valor1");
+            stackDeStrings.Push("valor2");
+            stackDeStrings.Push("valor3");
+            stackDeStrings.Push("valor4");
+            stackDeStrings.Push("valor5");
+            stackDeStrings.Push("valor6");
+            stackDeStrings.Push("valor7");
+            stackDeStrings.Push("valor8");
+
+            Console.WriteLine("sdfsdf");
+
+            foreach(string valor in stackDeStrings)
+            {
+                Console.WriteLine($"Este es el primer valor procesado {valor}");
+            }
+
+
+            Stack<Proceso> preciosActualizados = new Stack<Proceso>();
+            // emulo obtener de la base de datos los precios order by fecha
+
+            Proceso precio1 = new Proceso() {
+                precioAActualizar = 50,
+                cuando = "Lunes"
+            };
+
+            Proceso precio2 = new Proceso()
+            {
+                precioAActualizar = 80,
+                cuando="Martes"
+            };
+
+            Proceso precio3 = new Proceso()
+            {
+                precioAActualizar = 40,
+                cuando="Miercoes"
+            };
+
+
+            preciosActualizados.Push(precio1);
+            preciosActualizados.Push(precio2);
+            preciosActualizados.Push(precio3);
+
+            foreach(Proceso process in preciosActualizados)
+            {
+                process.ActualizarPublicacion();
+            }
+
+
+
+        }
+
     }
 
     class Persona
@@ -113,4 +172,15 @@ namespace EjeciciosEstructuraDatos
     }
 
     class Partida { }
+
+    class Proceso
+    {
+        public float precioAActualizar { get; set; }
+        public string cuando { set; get; }
+
+        public void ActualizarPublicacion()
+        {
+            Console.WriteLine($"Actualizando publicacion con precio {precioAActualizar}");
+        }
+    }
 }
