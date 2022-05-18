@@ -1,0 +1,7 @@
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\bin\Debug\EjeciciosEstructuraDatos.exe.config
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\bin\Debug\EjeciciosEstructuraDatos.exe
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\bin\Debug\EjeciciosEstructuraDatos.pdb
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.csprojAssemblyReference.cache
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.csproj.CoreCompileInputs.cache
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.exe
+D:\laragon\www\github personal\ejerciciosCsharp\EjeciciosEstructuraDatos\obj\Debug\EjeciciosEstructuraDatos.pdb
