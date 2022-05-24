@@ -410,6 +410,63 @@ namespace EjeciciosEstructuraDatos
                 
             }
         }
+        public static void ListadoFloats()
+        {
+
+            List<Ejercicio01> laFlota = new List<Ejercicio01>();
+
+            using (var reader = new StreamReader(@"C:\jlr\ejercicio01.csv"))
+            {
+                //List<string> listA = new List<string>();
+                //List<string> listB = new List<string>();
+
+
+
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    double bbase = Convert.ToDouble(values[0]);
+                    double altura = Convert.ToDouble(values[1]);
+                    double ancho = Convert.ToDouble(values[2]);
+                    double resultado = bbase * altura * ancho;
+
+
+                    laFlota.Add(new Ejercicio01()
+                    {
+                        bbase = Convert.ToDouble(values[0]),
+                        altura = Convert.ToDouble(values[1]),
+                        ancho = Convert.ToDouble(values[2]),
+                        //resultado = resultado
+                    });
+
+                }
+            }
+
+            int indice = 0;
+
+
+
+            foreach (Ejercicio01 valor in laFlota)
+            {
+                laFlota[indice].resultado = laFlota[indice].bbase * laFlota[indice].altura * laFlota[indice].ancho;
+                laFlota.IndexOf(valor);
+                Console.WriteLine($"El resultado es {valor.resultado}");
+                indice++;
+            }
+
+        }
+
+
+    }
+
+    class Ejercicio01
+    {
+        public double bbase { get; set; }
+        public double altura { get; set; }
+        public double ancho { get; set; }
+        public double resultado { get; set; }
     }
 
     class Persona : IComparable<Persona>
