@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,9 @@ namespace EjeciciosEstructuraDatos
             //StackExample();
             //QueuesAndDictionaries();
             //ListSortExample();
-            EjemploFuncionesList();
+            //EjemploFuncionesList();
             //FoundMedian();
+            EjercicioAgregado();
             Console.Read();
         }
 
@@ -66,7 +68,7 @@ namespace EjeciciosEstructuraDatos
             List<Persona> conversionArrayListaPersonas = new List<Persona>();
             conversionArrayListaPersonas.AddRange(listaPersonas);
 
-            int indexMarco=conversionArrayListaPersonas.IndexOf(persona_1);
+            int indexMarco = conversionArrayListaPersonas.IndexOf(persona_1);
             conversionArrayListaPersonas.RemoveAt(indexMarco);
 
             foreach (Persona item in conversionArrayListaPersonas)
@@ -120,7 +122,7 @@ namespace EjeciciosEstructuraDatos
 
             Console.WriteLine("sdfsdf");
 
-            foreach(string valor in stackDeStrings)
+            foreach (string valor in stackDeStrings)
             {
                 Console.WriteLine($"Este es el primer valor procesado {valor}");
             }
@@ -137,13 +139,13 @@ namespace EjeciciosEstructuraDatos
             Proceso precio2 = new Proceso()
             {
                 precioAActualizar = 80,
-                cuando="Martes"
+                cuando = "Martes"
             };
 
             Proceso precio3 = new Proceso()
             {
                 precioAActualizar = 40,
-                cuando="Miercoes"
+                cuando = "Miercoes"
             };
 
 
@@ -151,7 +153,7 @@ namespace EjeciciosEstructuraDatos
             preciosActualizados.Push(precio2);
             preciosActualizados.Push(precio3);
 
-            foreach(Proceso process in preciosActualizados)
+            foreach (Proceso process in preciosActualizados)
             {
                 process.ActualizarPublicacion();
             }
@@ -166,8 +168,8 @@ namespace EjeciciosEstructuraDatos
             Queue<Persona> ColeccionesDePersonas = new Queue<Persona>();
             Persona persona_1 = new Persona()
             {
-                name= "Marco Cantu",
-                age=40
+                name = "Marco Cantu",
+                age = 40
             };
 
             Persona persona_2 = new Persona();
@@ -232,7 +234,7 @@ namespace EjeciciosEstructuraDatos
             }
 
 
-            foreach (KeyValuePair<string,Persona> data in dictionaryPersonas)
+            foreach (KeyValuePair<string, Persona> data in dictionaryPersonas)
             {
                 string Key = data.Key;
                 Persona p = data.Value;
@@ -375,9 +377,9 @@ namespace EjeciciosEstructuraDatos
             ColeccionesDePersonas.Add(persona_6);
 
             double promedioEdades = ColeccionesDePersonas.Average(persona => persona.age);
-            int edadMaxima = ColeccionesDePersonas.Max(persona=>persona.age);
-            int edadMinima= ColeccionesDePersonas.Min(persona => persona.age);
-            string nombres = ColeccionesDePersonas.Aggregate((a, b) => new Persona() { name=a.name+","+b.name }).name;
+            int edadMaxima = ColeccionesDePersonas.Max(persona => persona.age);
+            int edadMinima = ColeccionesDePersonas.Min(persona => persona.age);
+            string nombres = ColeccionesDePersonas.Aggregate((a, b) => new Persona() { name = a.name + "," + b.name }).name;
 
             Console.WriteLine($"Promiedio de edad de lista es {promedioEdades}");
             Console.WriteLine($"Edad maxima es {edadMaxima}");
@@ -400,14 +402,14 @@ namespace EjeciciosEstructuraDatos
             };
             listaInt.Sort();
 
-            if((listaInt.Count %2) == 1)
+            if ((listaInt.Count % 2) == 1)
             {
-                int index= (int)((listaInt.Count() / 2) - .5);
+                int index = (int)((listaInt.Count() / 2) - .5);
                 Console.WriteLine(listaInt[index]);
             }
             else
             {
-                
+
             }
         }
         public static void ListadoFloats()
@@ -459,8 +461,27 @@ namespace EjeciciosEstructuraDatos
         }
 
 
-    }
+        public static void EjercicioAgregado()
+        {
+            int[] valores = { 1, 2, 3 };
+            int total = 0;
 
+            for (int i = 0; i < valores.Length; i++)
+            {
+                total += valores[i];
+            }
+            //Overload1: El Agregado simple
+            Console.WriteLine(valores.Aggregate((ant,nuevo)=>ant+nuevo));
+            //Overload2: Inicias desde el acumulador 10
+            Console.WriteLine(valores.Aggregate(10, (ant, nuevo) => ant + nuevo));
+            //Overolad3: Al resultado final se le agrega otra operación
+            Console.WriteLine(valores.Aggregate(10,(ant, nuevo) => ant + nuevo,ant=>ant*2));
+
+
+        }
+
+    }
+  
     class Ejercicio01
     {
         public double bbase { get; set; }
@@ -527,8 +548,7 @@ namespace EjeciciosEstructuraDatos
         public List<Partida> partidas = new List<Partida>();
     }
 
-    class Partida { }
-
+   
     class Proceso
     {
         public float precioAActualizar { get; set; }
